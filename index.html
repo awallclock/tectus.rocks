@@ -8,6 +8,7 @@ Visit http://rainbow.arch.scriptmania.com/scripts/
 
 //Pre-loads your image/s below
 //Configure below - change URL path to the snow image
+	 	let playSound = () => new Audio("rise.ogg").play()
 
 grphcs=new Array(6)
 Image0=new Image();
@@ -49,7 +50,7 @@ else{
 	for (i = 0; i < Amount; i++){
 		var P=Math.floor(Math.random()*grphcs.length);
 		rndPic=grphcs[P];
-		document.write('<img id="si'+i+'" src="'+rndPic+'" style="position:absolute;top:0px;left:0px">');
+		document.write('<img id="si'+i+'" src="'+rndPic+'" style="position:absolute;top:0px;left:0px" onClick="playSound()">');
 	}
 	document.write('</div></div>');
 }
